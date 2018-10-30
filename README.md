@@ -1,5 +1,17 @@
 # Orange Weather 
-An React web application using Accuuweather and Google Apis.
+A React web application using Accuweather and Google APIs.
+
+## Details 
+On the homepage, we have 7 Backgrounds, which we use depending on the weather.
+
+- Thunderstorm
+- Drizzle
+- Rain
+- Snow
+- Atmosphere
+- Clear sky
+- Clouds
+
 
 ## Built With
 - Reactjs 16.4.1
@@ -30,3 +42,15 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## Contributors
 [**Mina Hosseini Moghadam**](http://linkedin.com/in/minahm)
+
+## Screenshots
+- Home
+
+![home](/screenshots/home-clouds.jpg)
+
+![home](/screenshots/home-t.jpg)
+
+
+- Search
+
+![search](/screenshots/search.jpg)
