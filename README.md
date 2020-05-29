@@ -15,7 +15,6 @@ On the homepage, we have 7 Backgrounds, which we use depending on the weather.
 
 ## Built With
 - Reactjs 16.4.1
-- Bootstrap 4
 - [Accuweather Api](https://developer.accuweather.com/apis)
 - Google Geolocation Api
 
