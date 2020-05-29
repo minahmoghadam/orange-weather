@@ -41,7 +41,7 @@ Navigate to `http://localhost:3000/`.
 Run `npm run build` to build the project. The build artifacts will be stored in the `build/` directory.
 
 ## Contributors
-[**Mina Hosseini Moghadam**](http://linkedin.com/in/minahm)
+[**Mina Hosseini Moghadam**](https://www.linkedin.com/in/minahmoghadam)
 
 ## Screenshots
 - Home
