@@ -1,9 +1,9 @@
 import React from 'react';
 import { Const } from '../../Const';
 
-const showWeekDays = (dt) =>{
+const showWeekDays = (dt) => {
     let d = new Date(dt * 1000).getDay();
-    switch(d){
+    switch(d) {
         case 0 : d='Sun'; break;
         case 1 : d='Mon'; break;
         case 2 : d='Tue'; break;
@@ -15,12 +15,12 @@ const showWeekDays = (dt) =>{
     return d;
 };
 
-export const DailyWeatherCol = ({col}) =>{
+export const DailyWeatherCol = ({col}) => {
     return(
         <div className="daily text-center">
             <h6>{showWeekDays(col.dt).toString()}</h6>
             <div>
-                <img src={Const.WEATHER_IMG_URL + '/' + col.weather[0].icon +'.png'} />
+                <img src={Const.WEATHER_IMG_URL + '/' + col.weather[0].icon +'.png'}/>
                 <p className="deg">
                     {parseInt(col.temp.min)} &deg;&nbsp;<sup>c</sup> | {parseInt(col.temp.max)} &deg;&nbsp;<sup>c</sup>
                 </p>

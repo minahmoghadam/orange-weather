@@ -16,11 +16,12 @@ const options = {
     }
 };
 
-export class HourlyWeather extends Component{
-    constructor(props){
+export class HourlyWeather extends Component {
+    constructor(props) {
         super(props);
-    }
-    render(){
+	}
+	
+    render() {
         return(
             <div className="weather">
                 <div className="carousel">

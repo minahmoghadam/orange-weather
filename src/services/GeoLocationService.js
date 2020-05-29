@@ -3,7 +3,7 @@ const base_url = 'https://www.googleapis.com/geolocation/v1';
 const geo_key = process.env.REACT_APP_GOOGLE_GEOLOCATION;
 
 export default {
-   GetCurrentLocation(){
+   GetCurrentLocation() {
         return new Promise ((resolve, reject) => {
             axios.post(
                 base_url + '/geolocate?key='+ geo_key,

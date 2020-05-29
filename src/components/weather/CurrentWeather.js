@@ -9,18 +9,18 @@ export const  CurrentWeather = (props) => {
     return (
         <div className="weather">
             <div className="row">
-                <div className="col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4 current">
+                <div className="col-12 col-sm-6 col-md-3 current">
                 <div> 
                     <h5>{data.sys.country}, {data.name}</h5>
                 </div>
-                    <div>
-                        <img src={Const.WEATHER_IMG_URL + '/' + data.weather[0].icon +'.png'} />&nbsp;&nbsp;&nbsp;
+                    <div className="row temp-holder">
+                        <img src={Const.WEATHER_IMG_URL + '/' + data.weather[0].icon +'.png'} />
                         <span className="deg">
                             {parseInt(data.main.temp)} &deg;&nbsp;<sup>c</sup>
                         </span>
                     </div>
                     <p className="desc">{data.weather[0].description}</p> 
-                    <div className="row">
+                    <div className="row min-max-holder">
                         <span className="col-6">
                             {parseInt(data.main.temp_min)} &deg;&nbsp;<sup>c</sup>
                         </span>

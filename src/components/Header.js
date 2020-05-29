@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom';
 export default class Header extends Component {
     render() {
         return (
-        <header className="container-fluid">
-            <nav className="navbar navbar-expand-lg">
+        <header>
+            <nav className="row">
                 <a className="navbar-brand">Orange Weather</a>
-                <div>
-                    <ul className="mr-auto menu">
+                <div className="main-nav">
+                    <ul className="menu row">
                         <li>
                             <NavLink activeClassName="active" exact to="/">Dashboard</NavLink>
                         </li>

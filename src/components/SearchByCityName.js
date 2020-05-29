@@ -5,7 +5,7 @@ import Header from './Header';
 import { Const } from '../Const'
 
 class SearchByCityName extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             showSearchResult: false,
@@ -17,22 +17,22 @@ class SearchByCityName extends Component {
         this.handleInputSubmit = this.handleInputSubmit.bind(this);
     }
 
-    handleInputChange(e){
+    handleInputChange(e) {
         this.setState({key: e.target.value});
     }
-    handleInputSubmit(e){
+    handleInputSubmit(e) {
         e.preventDefault();
         //console.log(e.target.value);
-        if(this.state.key.length > 2){
+        if(this.state.key.length > 2) {
             this.getWeatherByCityName(this.state.key);
         }
     }
-    getWeatherByCityName(city){
+    getWeatherByCityName(city) {
         WeatherService.GetWeatherByCityName(city)
         .then(response => {
             this.setState({searchResult: response, showSearchResult: true, searchError: ''});
         
-        }).catch(error =>{
+        }).catch(error => {
             console.log(error);
             this.setState({searchResult:[], showSearchResult: false, searchError: 'Not Found :)'});
         });
@@ -49,14 +49,16 @@ class SearchByCityName extends Component {
                             <p>Put the city's name or its part and get the list of the most proper cities in the world. Example - Lon or Lond or London. The more precise city name you put the more precise list you will get.</p>
                         </li>
                     </ul>
-                    <div className="col-12 col-md-4 offset-md-4 col-sm-6 offset-sm-3 mt-3">
-                        <form className=" input-group" onSubmit={this.handleInputSubmit}>
-                            <input type="text" className="form-control" placeholder="City name" onChange={this.handleInputChange}/>
-                            <div className="input-group-append">
-                                <input type="submit" className="btn btn-main" value="search"/>
-                            </div>
+                    <div className="flex-col search-form">
+                        <form className="flex-row input-group" onSubmit={this.handleInputSubmit}>
+							<div className="flex-row"> 
+								<input type="text" className="form-control" placeholder="City name" onChange={this.handleInputChange}/>
+								<div className="search-btn">
+									<input type="submit" className="btn btn-main" value="search"/>
+								</div>
+							</div>
                         </form>
-                        <div className="mt-2">
+                        <div className="flex-row">
                             {
                                 this.state.showSearchResult && 
                                 <div className="search-result">
